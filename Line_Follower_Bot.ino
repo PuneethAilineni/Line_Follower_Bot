@@ -7,7 +7,7 @@ int RIGHTMOST_SENSOR = A4;
 int LEFT_MOTOR = 2;
 int RIGHT_MOTOR = 3;
 
-int LINE_THRESHOLD = 150; 
+int LINE_THRESHOLD = 500; 
 float KP = 0.5;  
 float KD = 5;   
 float KI = 0.004;  
