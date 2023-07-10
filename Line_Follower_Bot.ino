@@ -51,7 +51,7 @@ void loop() {
   Serial.println(rightmostSensorValue);
   Serial.println();
 
-  error = (leftmostSensorValue * -0.04) + (leftSensorValue * -0.02) + (rightSensorValue * 0.02) + (rightmostSensorValue * 0.04);
+  error = (leftmostSensorValue * -0.1) + (leftSensorValue * -0.05) + (rightSensorValue * 0.05) + (rightmostSensorValue * 0.1);
 
   float proportional = error;
   float derivative = (error - previousError)/dt;
