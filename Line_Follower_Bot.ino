@@ -67,19 +67,19 @@ void loop() {
     analogWrite(LEFT_MOTOR, 200);
     analogWrite(RIGHT_MOTOR, 200);
   }
-  if (leftsensorvalue > LINE_THRESHOLD) {
+  else if (leftsensorvalue > LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  } if (leftmostSensorValue > LINE_THRESHOLD) {
+  }else if (leftmostSensorValue > LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  } if (rightSensorValue > LINE_THRESHOLD) {
+  }else if (rightSensorValue > LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  } if (rightmostsensorvalue > LINE_THRESHOLD) {
+  }else if (rightmostsensorvalue > LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  } if (leftmostsensorvalue>LINE_THRESHOLD && leftsensorvalue>LINE_THRESHOLD && centersensorvalue>LINE_THRESHOLD && rightsensorvalue>LINE_THRESHOLD && rightmostsensorvalue>LINE_THRESHOLD){
+  }else if (leftmostsensorvalue>LINE_THRESHOLD && leftsensorvalue>LINE_THRESHOLD && centersensorvalue>LINE_THRESHOLD && rightsensorvalue>LINE_THRESHOLD && rightmostsensorvalue>LINE_THRESHOLD){
     analogWrite(LEFT_MOTOR, 0);
     analogWrite(RIGHT_MOTOR, 0);
   }
