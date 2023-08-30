@@ -66,23 +66,23 @@ void loop() {
     output = -55;
   }
   
-  if (leftmostsensorvalue<LINE_THRESHOLD && leftsensorvalue<LINE_THRESHOLD && centersensorvalue>LINE_THRESHOLD && rightsensorvalue<LINE_THRESHOLD && rightmostsensorvalue<LINE_THRESHOLD){
+  if (leftmostsensorvalue>LINE_THRESHOLD && leftsensorvalue>LINE_THRESHOLD && centersensorvalue<LINE_THRESHOLD && rightsensorvalue>LINE_THRESHOLD && rightmostsensorvalue>LINE_THRESHOLD){
     analogWrite(LEFT_MOTOR, 200);
     analogWrite(RIGHT_MOTOR, 200);
   }
-  else if (leftsensorvalue > LINE_THRESHOLD) {
+  else if (leftsensorvalue < LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  }else if (leftmostSensorValue > LINE_THRESHOLD) {
+  }else if (leftmostSensorValue < LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  }else if (rightSensorValue > LINE_THRESHOLD) {
+  }else if (rightSensorValue < LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  }else if (rightmostsensorvalue > LINE_THRESHOLD) {
+  }else if (rightmostsensorvalue < LINE_THRESHOLD) {
     analogWrite(LEFT_MOTOR, 200 + output);
     analogWrite(RIGHT_MOTOR, 200 - output);
-  }else if (leftmostsensorvalue>LINE_THRESHOLD && leftsensorvalue>LINE_THRESHOLD && centersensorvalue>LINE_THRESHOLD && rightsensorvalue>LINE_THRESHOLD && rightmostsensorvalue>LINE_THRESHOLD){
+  }else if (leftmostsensorvalue<LINE_THRESHOLD && leftsensorvalue<LINE_THRESHOLD && centersensorvalue<LINE_THRESHOLD && rightsensorvalue<LINE_THRESHOLD && rightmostsensorvalue<LINE_THRESHOLD){
     analogWrite(LEFT_MOTOR, 0);
     analogWrite(RIGHT_MOTOR, 0);
   }
